@@ -1,0 +1,35 @@
+<{% extends "base.html" %}
+
+{% block title %}Product Reviews{% endblock %}
+
+{% block content %}
+<h2 class="text-center">Product Reviews</h2>
+
+<!-- Table to display the reviews -->
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Name</th>
+            <th>Rating</th>
+            <th>Comment Heading</th>
+            <th>Comment</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for review in reviews %}
+        <tr>
+            <td>{{ review.product }}</td>
+            <td>{{ review.Name }}</td>
+            <td>{{ review.Rating }}</td>
+            <td>{{ review.CommentHead }}</td>
+            <td>{{ review.comment }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- Link to search again -->
+<a href="/" class="btn btn-primary">Search Again</a>
+
+{% endblock %}
