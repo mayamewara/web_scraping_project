@@ -3,4 +3,4 @@ flask_cors
 requests
 bs4
 logging
-
+pymongo
